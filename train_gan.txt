@@ -1,0 +1,186 @@
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/compare_gan/architectures/abstract_arch.py:71: The name tf.AUTO_REUSE is deprecated. Please use tf.compat.v1.AUTO_REUSE instead.
+
+INFO:tensorflow:GAN Training enabled. Training discriminator for 1 steps.
+INFO:tensorflow:Using TFDS=TFDSArguments(dataset_name='cifar10', features_key='image', downloads_dir=None)
+2021-05-03 12:08:44.056427: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2021-05-03 12:08:44.107608: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-03 12:08:44.108190: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Found device 0 with properties: 
+name: Tesla T4 major: 7 minor: 5 memoryClockRate(GHz): 1.59
+pciBusID: 0000:00:04.0
+2021-05-03 12:08:44.158025: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2021-05-03 12:08:44.168336: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2021-05-03 12:08:44.172035: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2021-05-03 12:08:44.262482: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2021-05-03 12:08:44.273922: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2021-05-03 12:08:44.279847: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2021-05-03 12:08:44.360812: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2021-05-03 12:08:44.360972: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-03 12:08:44.361864: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-03 12:08:44.362409: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1767] Adding visible gpu devices: 0
+INFO:tensorflow:Scaling down Tensor("args_0:0", shape=(32, 32, 3), dtype=uint8) and cropping to 256 x 256
+INFO:tensorflow:Scaling down Tensor("args_0:0", shape=(32, 32, 3), dtype=uint8) and cropping to 256 x 256
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+INFO:tensorflow:Unrolling graph for discriminator
+INFO:tensorflow:Unrolling graph for discriminator
+WARNING:tensorflow:From /content/drive/My Drive/Colab Notebooks/CLIC2021/compression/models/hific/model.py:892: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From /content/drive/My Drive/Colab Notebooks/CLIC2021/compression/models/hific/model.py:892: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+INFO:tensorflow:Using LPIPS...
+INFO:tensorflow:Using LPIPS...
+2021-05-03 12:09:04.113419: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2021-05-03 12:09:04.168714: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2199995000 Hz
+2021-05-03 12:09:04.169424: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5576a5c3b480 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-05-03 12:09:04.169459: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2021-05-03 12:09:04.169735: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-03 12:09:04.170781: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Found device 0 with properties: 
+name: Tesla T4 major: 7 minor: 5 memoryClockRate(GHz): 1.59
+pciBusID: 0000:00:04.0
+2021-05-03 12:09:04.170895: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2021-05-03 12:09:04.170968: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2021-05-03 12:09:04.171124: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2021-05-03 12:09:04.171196: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2021-05-03 12:09:04.171233: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2021-05-03 12:09:04.171259: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2021-05-03 12:09:04.171285: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2021-05-03 12:09:04.171413: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-03 12:09:04.172533: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-03 12:09:04.173305: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1767] Adding visible gpu devices: 0
+2021-05-03 12:09:04.173394: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2021-05-03 12:09:04.291313: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1180] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-05-03 12:09:04.291359: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1186]      0 
+2021-05-03 12:09:04.291376: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1199] 0:   N 
+2021-05-03 12:09:04.291543: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-03 12:09:04.292176: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-03 12:09:04.292731: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-03 12:09:04.293244: W tensorflow/core/common_runtime/gpu/gpu_bfc_allocator.cc:39] Overriding allow_growth setting because the TF_FORCE_GPU_ALLOW_GROWTH environment variable is set. Original config value was 0.
+2021-05-03 12:09:04.293289: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14257 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5)
+2021-05-03 12:09:04.294803: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5576a5c3bd40 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2021-05-03 12:09:04.294833: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla T4, Compute Capability 7.5
+INFO:tensorflow:
+Starting MonitoredTrainingSession at ckpts/hific
+
+INFO:tensorflow:
+Starting MonitoredTrainingSession at ckpts/hific
+
+INFO:tensorflow:Create CheckpointSaverHook.
+INFO:tensorflow:Create CheckpointSaverHook.
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow_core/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
+WARNING:tensorflow:From /usr/local/lib/python3.7/site-packages/tensorflow_core/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
+INFO:tensorflow:Graph was finalized.
+INFO:tensorflow:Graph was finalized.
+2021-05-03 12:09:13.653280: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-03 12:09:13.654039: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1639] Found device 0 with properties: 
+name: Tesla T4 major: 7 minor: 5 memoryClockRate(GHz): 1.59
+pciBusID: 0000:00:04.0
+2021-05-03 12:09:13.654147: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2021-05-03 12:09:13.654176: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2021-05-03 12:09:13.654208: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2021-05-03 12:09:13.654227: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2021-05-03 12:09:13.654248: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2021-05-03 12:09:13.654266: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2021-05-03 12:09:13.654287: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2021-05-03 12:09:13.654425: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-03 12:09:13.655187: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-03 12:09:13.655732: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1767] Adding visible gpu devices: 0
+2021-05-03 12:09:13.655777: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1180] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-05-03 12:09:13.655793: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1186]      0 
+2021-05-03 12:09:13.655803: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1199] 0:   N 
+2021-05-03 12:09:13.655938: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-03 12:09:13.656712: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-03 12:09:13.657341: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1325] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14257 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5)
+2021-05-03 12:09:21.581583: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 0 into ckpts/hific/model.ckpt.
+INFO:tensorflow:Saving checkpoints for 0 into ckpts/hific/model.ckpt.
+INFO:tensorflow:Restoring <tensorflow.python.training.saver.Saver object at 0x7f16112c6ad0>...
+INFO:tensorflow:Restoring <tensorflow.python.training.saver.Saver object at 0x7f16112c6ad0>...
+INFO:tensorflow:Restoring parameters from ckpts/mse_lpips/model.ckpt-1000
+INFO:tensorflow:Restoring parameters from ckpts/mse_lpips/model.ckpt-1000
+2021-05-03 12:09:53.497310: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+INFO:tensorflow:Restoring <tensorflow.python.training.saver.Saver object at 0x7f16108cfd10>...
+INFO:tensorflow:Restoring <tensorflow.python.training.saver.Saver object at 0x7f16108cfd10>...
+INFO:tensorflow:Restoring parameters from ckpts/mse_lpips/model.ckpt-1000
+INFO:tensorflow:Restoring parameters from ckpts/mse_lpips/model.ckpt-1000
+WARNING:tensorflow:It seems that global step (tf.train.get_global_step) has not been increased. Current value (could be stable): 0 vs previous value: 0. You could increase the global step by passing tf.train.get_global_step() to Optimizer.apply_gradients or Optimizer.minimize.
+WARNING:tensorflow:It seems that global step (tf.train.get_global_step) has not been increased. Current value (could be stable): 0 vs previous value: 0. You could increase the global step by passing tf.train.get_global_step() to Optimizer.apply_gradients or Optimizer.minimize.
+INFO:tensorflow:Restoring <tensorflow.python.training.saver.Saver object at 0x7f16108cfc10>...
+INFO:tensorflow:Restoring <tensorflow.python.training.saver.Saver object at 0x7f16108cfc10>...
+INFO:tensorflow:Restoring parameters from ckpts/mse_lpips/model.ckpt-1000
+INFO:tensorflow:Restoring parameters from ckpts/mse_lpips/model.ckpt-1000
+WARNING:tensorflow:It seems that global step (tf.train.get_global_step) has not been increased. Current value (could be stable): 0 vs previous value: 0. You could increase the global step by passing tf.train.get_global_step() to Optimizer.apply_gradients or Optimizer.minimize.
+WARNING:tensorflow:It seems that global step (tf.train.get_global_step) has not been increased. Current value (could be stable): 0 vs previous value: 0. You could increase the global step by passing tf.train.get_global_step() to Optimizer.apply_gradients or Optimizer.minimize.
+INFO:tensorflow:Session setup, starting training...
+INFO:tensorflow:Session setup, starting training...
+WARNING:tensorflow:It seems that global step (tf.train.get_global_step) has not been increased. Current value (could be stable): 0 vs previous value: 0. You could increase the global step by passing tf.train.get_global_step() to Optimizer.apply_gradients or Optimizer.minimize.
+WARNING:tensorflow:It seems that global step (tf.train.get_global_step) has not been increased. Current value (could be stable): 0 vs previous value: 0. You could increase the global step by passing tf.train.get_global_step() to Optimizer.apply_gradients or Optimizer.minimize.
+INFO:tensorflow:First iteration passed.
+INFO:tensorflow:First iteration passed.
+INFO:tensorflow:global_step/sec: 0.35819
+INFO:tensorflow:global_step/sec: 0.35819
+INFO:tensorflow:Iteration 101
+INFO:tensorflow:Iteration 101
+INFO:tensorflow:global_step/sec: 0.745735
+INFO:tensorflow:global_step/sec: 0.745735
+INFO:tensorflow:Iteration 201
+INFO:tensorflow:Iteration 201
+INFO:tensorflow:global_step/sec: 0.731046
+INFO:tensorflow:global_step/sec: 0.731046
+INFO:tensorflow:Iteration 301
+INFO:tensorflow:Iteration 301
+INFO:tensorflow:global_step/sec: 0.726949
+INFO:tensorflow:global_step/sec: 0.726949
+INFO:tensorflow:Iteration 401
+INFO:tensorflow:Iteration 401
+INFO:tensorflow:global_step/sec: 0.725376
+INFO:tensorflow:global_step/sec: 0.725376
+INFO:tensorflow:Iteration 501
+INFO:tensorflow:Iteration 501
+INFO:tensorflow:global_step/sec: 0.724749
+INFO:tensorflow:global_step/sec: 0.724749
+INFO:tensorflow:Iteration 601
+INFO:tensorflow:Iteration 601
+INFO:tensorflow:global_step/sec: 0.724978
+INFO:tensorflow:global_step/sec: 0.724978
+INFO:tensorflow:Iteration 701
+INFO:tensorflow:Iteration 701
+INFO:tensorflow:global_step/sec: 0.724214
+INFO:tensorflow:global_step/sec: 0.724214
+INFO:tensorflow:Iteration 801
+INFO:tensorflow:Iteration 801
+INFO:tensorflow:global_step/sec: 0.723686
+INFO:tensorflow:global_step/sec: 0.723686
+INFO:tensorflow:Iteration 901
+INFO:tensorflow:Iteration 901
+INFO:tensorflow:global_step/sec: 0.721375
+INFO:tensorflow:global_step/sec: 0.721375
+INFO:tensorflow:Saving checkpoints for 1000 into ckpts/hific/model.ckpt.
+INFO:tensorflow:Saving checkpoints for 1000 into ckpts/hific/model.ckpt.
+INFO:tensorflow:Training session closed.
+INFO:tensorflow:Training session closed.
